@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8" />
+
+
+<ion-view title="Ayuda con mi Vodafone">
+
+    <ion-content padding="true">
+        <div class="watson_banner">
+            <img src="images/watson.png" />
+        </div>
+
+        <div ng-repeat="mensaje in mensajes">
+            <div class="userEnquiry" ng-if="mensaje.user">
+                <p> {{mensaje.text}} </p>
+            </div>
+
+            <div ng-if="!mensaje.user">
+                <p class="answerWatson" compile='mensaje.text'>{{mensaje.text}}</p>
+            </div>
+        </div>
+
+
+        <div style="position:relative;">
+            <form ng-submit="sendMessage(mensajeUsuario); mensajeUsuario=''" handle-phone-submit>
+                <textarea rows=4 ng-model="mensajeUsuario" id="inputUser"></textarea>
+                <button class="btnSend"><i class="icon ion-edit"></i></button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

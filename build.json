@@ -1,11 +1,11 @@
 {
      "android": {
          "release": {
-             "keystore": "",
-             "storePassword": "",
-             "alias": "",
-             "password" : "",
-             "keystoreType": ""
+             "keystore": "c:\\viewnext-hybrid-key.keystore",
+             "storePassword": "2855722-L",
+             "alias": "ViewNext",
+             "password" : "2855722-L",
+             "keystoreType": "2855722-L"
          }
      }
  }
